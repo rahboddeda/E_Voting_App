@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "studentId": "422121",
+      "password": "$2b$10$ixQ78wzGx48vvmokbOoAl.lXV7orKIbY7bJ8R3K/VYZy0ic0MPCCu",
+      "name": "Rahul",
+      "email": "422121@student.nitandhra.ac.in"
+    },
+    {
+      "studentId": "422113",
+      "password": "$2b$10$p6t1ceR8I6tdPhcVkeNoIeTcFBu3uOMDT8lbdfXhAWwfyrmRkuLIG",
+      "name": "Revanth",
+      "email": "422113@student.nitandhra.ac.in"
+    },
+    {
+      "studentId": "422170",
+      "password": "$2b$10$SNggGj7tDAY0R5OFLeN5jOEunqK/mZBiWjPBCLq1S1FfLLBos/8aO",
+      "name": "Kaya Krishna",
+      "email": "kay@gmail.com"
+    },
+    {
+      "studentId": "422177",
+      "password": "$2b$10$XvQU6XxMQbrx5LT1seE.K.tW9ciVK4mH0vmZMD8ES..7/NxHU/Qfm",
+      "name": "ABC",
+      "email": "AA@gmail.com"
+    }
+  ]
+}

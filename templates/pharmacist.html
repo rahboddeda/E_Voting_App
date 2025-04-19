@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Pharmacist View</h2>
+  <div id="approved"></div>
+  <button onclick="logout()">Logout</button>
+  <script>
+    function loadApproved() {
+      fetch('/get_approved').then(res => res.json()).then(data => {
+        let html = '';
+        for (let code in data) {
+          html += `<div id="req-${code}">
+            <b>Request ID:</b> ${code}<br>
+            <b>Patient:</b> ${data[code].patient}<br>
+            <b>Medicines:</b> ${data[code].medicines.join(', ')}<br>
+            <button onclick="done('${code}')">Done</button><hr>
+          </div>`;
+        }
+        document.getElementById('approved').innerHTML = html;
+      });
+    }
+
+    function done(code) {
+      fetch('/pharmacist_done', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ code: code })
+      }).then(res => res.json()).then(data => {
+        if (data.status === 'deleted') {
+          document.getElementById(`req-${code}`).remove();
+        }
+      });
+    }
+
+    function logout() {
+      window.location.href = "/logout";
+    }
+
+    loadApproved();
+  </script>
+</body>
+</html>

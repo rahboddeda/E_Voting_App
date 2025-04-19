@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Doctor Dashboard</h2>
+  <div id="reqs"></div>
+  <button onclick="logout()">Logout</button>
+  <script>
+    function loadRequests() {
+      fetch('/get_requests').then(res => res.json()).then(data => {
+        let html = '';
+        for (let code in data) {
+          html += `<div>
+            <b>Request ID:</b> ${code}<br>
+            <b>Patient:</b> ${data[code].patient}<br>
+            <b>Medicines:</b> ${data[code].medicines.join(', ')}<br>
+            <button onclick="approve('${code}')">Approve</button><hr>
+          </div>`;
+        }
+        document.getElementById('reqs').innerHTML = html;
+      });
+    }
+    function approve(code) {
+      fetch('/approve_request', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ code: code })
+      }).then(res => res.json()).then(data => {
+        alert(data.status);
+        loadRequests();
+      });
+    }
+    function logout() {
+      window.location.href = "/logout";
+    }
+    loadRequests();
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Select Medicines</h2>
+  <div>
+    <input type="checkbox" value="Paracetamol">Paracetamol<br>
+    <input type="checkbox" value="Ibuprofen">Ibuprofen<br>
+    <input type="checkbox" value="Amoxicillin">Amoxicillin<br>
+  </div>
+  <button onclick="submit()">ORDER PLACED</button>
+  <button onclick="logout()">Logout</button>
+  <script>
+    function submit() {
+      let meds = Array.from(document.querySelectorAll('input[type=checkbox]:checked')).map(cb => cb.value);
+      fetch('/submit_request', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ medicines: meds })
+      }).then(res => res.json()).then(data => {
+        alert("Request ID: " + data.request_id);
+      });
+    }
+    function logout() {
+      window.location.href = "/logout";
+    }
+  </script>
+</body>
+</html>

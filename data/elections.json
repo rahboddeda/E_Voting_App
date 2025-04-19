@@ -1,23 +1,23 @@
 {
   "elections": [
     {
-      "id": "1744467867014",
+      "id": "1745056647131",
       "title": "undefined",
-      "description": "President",
+      "description": "President Elections",
       "contestants": [
         {
-          "id": "1744467867014zgtt9ck1y",
-          "name": "Rahul Boddeda",
-          "photo": "/images/1744467867006-252497460.png"
+          "id": "17450566471312dywpqw3a",
+          "name": "Rahul",
+          "photo": "/images/1745056647093-916296965.png"
         },
         {
-          "id": "1744467867014h3568jbre",
-          "name": "hier",
-          "photo": "/images/1744467867010-842385069.png"
+          "id": "1745056647131r0o82fqht",
+          "name": "Raghav",
+          "photo": "/images/1745056647116-732191254.png"
         }
       ],
       "isActive": false,
-      "createdAt": "2025-04-12T14:24:27.014Z"
+      "createdAt": "2025-04-19T09:57:27.131Z"
     }
   ]
 }

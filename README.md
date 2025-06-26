@@ -16,7 +16,7 @@ A secure and user-friendly online voting system built with HTML, CSS, JavaScript
 | **Duplicate Vote Warning** | ![Vote Twice Warning](./screenshots/vote_twice_warning.png) |
 | **Results Page**           | ![Results](./screenshots/results.png)                       |
 
-> 📁 **Place all your screenshots inside the `screenshots/` folder** and rename accordingly.
+
 
 ---
 
@@ -114,10 +114,6 @@ Navigate to: `http://localhost:3000`
 | Admin ends voting            | Winners announced     |
 
 ---
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 

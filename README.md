@@ -129,5 +129,5 @@ Thanks to everyone who contributed ideas, testing, and feedback.
 
 ## 📬 Contact
 
-Created by [Your Name] – [rahulboddeda@gmail.com]  
+Created by Rahul Boddeda – rahulboddeda@gmail.com  
 Feel free to contact me for feedback or contributions!
